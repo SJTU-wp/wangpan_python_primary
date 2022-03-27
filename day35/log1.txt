@@ -1,0 +1,4 @@
+2022-03-26 17:30:36,730 - one_logging.py[line:27] - INFO: 这是 logging info message
+2022-03-26 17:30:36,730 - one_logging.py[line:28] - WARNING: 这是 logging a warning message
+2022-03-26 17:30:36,730 - one_logging.py[line:29] - ERROR: 这是 an logging error message
+2022-03-26 17:30:36,730 - one_logging.py[line:30] - CRITICAL: 这是 logging critical message
