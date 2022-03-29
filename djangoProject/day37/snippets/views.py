@@ -14,7 +14,7 @@ def snippet_list(request):
         snippets = Snippet.objects.all()
         # serializer是一个序列化对象
         serializer = SnippetSerializer(snippets, many=True)
-        return JsonResponse(serializer.data, safe=False)
+        return JsonResponse(serializer.data, safe=False)  # 使用Django自带方法，响应json格式的数据
 
     elif request.method == 'POST':
         data = JSONParser().parse(request)
@@ -36,12 +36,12 @@ def snippet_detail(request, pk):
         return HttpResponse(status=404)
 
     if request.method == 'GET':  # 详情页的查询
-        serializer = SnippetSerializer(snippet)
-        return JsonResponse(serializer.data)
+        serializer = SnippetSerializer(snippet)  # 序列化
+        return JsonResponse(serializer.data)  # 使用Django自带方法，响应json格式的数据
 
     elif request.method == 'PUT':  # 修改
-        data = JSONParser().parse(request)
-        serializer = SnippetSerializer(snippet, data=data)
+        data = JSONParser().parse(request)  # 将数据解析为Python原生数据类型
+        serializer = SnippetSerializer(snippet, data=data)  # 反序列化
         if serializer.is_valid():
             serializer.save()
             return JsonResponse(serializer.data)

@@ -19,6 +19,6 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
-    path('api/', include("books.urls")),  # 使用自己应用内的路由
-    path('api/', include("snippets.urls"))
+    path('', include("books.urls")),  # 使用自己应用内的路由
+    path('', include("snippets.urls"))
 ]
