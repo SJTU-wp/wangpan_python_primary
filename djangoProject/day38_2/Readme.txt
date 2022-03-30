@@ -1,0 +1,3 @@
+利用专门的路由器DefaultRouter实现简洁的url
+单步调试
+视图集中使用set_password
