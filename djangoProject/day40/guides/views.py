@@ -36,3 +36,18 @@ class CommentViewSet(ModelViewSet):
 class EventViewSet(ModelViewSet):
     queryset = Event.objects.all().order_by('id')
     serializer_class = EventSerializer
+
+
+class Event1ViewSet(ModelViewSet):
+    queryset = Event1.objects.all()
+    serializer_class = Event1Serializer
+
+
+class AlbumViewSet(ModelViewSet):
+    queryset = Album.objects.all()
+    serializer_class = AlbumSerializer
+
+
+class TrackViewSet(ModelViewSet):  # V
+    queryset = Track.objects.all()  # M
+    serializer_class = TrackSerializer  # S

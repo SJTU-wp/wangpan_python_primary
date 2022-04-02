@@ -9,6 +9,9 @@ router = DefaultRouter()  # 帮我们做了list，detail的方法跳转对应
 
 router.register(r'comments', CommentViewSet)
 router.register(r'events', EventViewSet)
+router.register(r'event1s', Event1ViewSet)
+router.register(r'albums', AlbumViewSet)
+router.register(r'tracks', TrackViewSet)
 
 urlpatterns = [
     # re_path(r'^upload/(?P<filename>[^/]+)$', FileUploadView.as_view()),
